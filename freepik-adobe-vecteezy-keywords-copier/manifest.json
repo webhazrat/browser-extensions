@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Stock Keyword Copier",
+  "version": "1.0",
+  "author": "ITWINDOW - A Digital Agency",
+  "description": "Copy keywords from Freepik, Adobe Stock, and Vecteezy with a click.",
+  "permissions": ["clipboardWrite", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://stock.adobe.com/*",
+        "https://www.freepik.com/*",
+        "https://www.vecteezy.com/*"
+      ],
+      "js": ["script.js"]
+    }
+  ]
+}
