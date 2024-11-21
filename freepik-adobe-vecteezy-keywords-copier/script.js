@@ -14,6 +14,9 @@ const vecteezyWrapper = document.querySelector(
 );
 // .splide__list > li > a
 
+const pikbestWrapper = document.querySelector(".about");
+// .tag-list > a
+
 const copyKeywords = async () => {
   try {
     let items;
@@ -33,6 +36,11 @@ const copyKeywords = async () => {
     // Check if the site is Vecteezy
     if (vecteezyWrapper) {
       items = vecteezyWrapper.querySelectorAll(".splide__list > li > a");
+    }
+
+    // Check if the site is pikbest
+    if (pikbestWrapper) {
+      items = pikbestWrapper.querySelectorAll(".tag-list > a");
     }
 
     // If keywords were found, process them
@@ -70,6 +78,9 @@ if (adobeWrapper) {
 }
 if (vecteezyWrapper) {
   vecteezyWrapper.insertAdjacentHTML("afterbegin", copyBtn);
+}
+if (pikbestWrapper) {
+  pikbestWrapper.insertAdjacentHTML("afterbegin", copyBtn);
 }
 
 document
