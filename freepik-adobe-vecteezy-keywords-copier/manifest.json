@@ -10,7 +10,8 @@
       "matches": [
         "https://stock.adobe.com/*",
         "https://www.freepik.com/*",
-        "https://www.vecteezy.com/*"
+        "https://www.freepik.com/*",
+        "https://pikbest.com/*"
       ],
       "js": ["script.js"]
     }
