@@ -1,11 +1,12 @@
 // freepik
 const freepikWrapper =
   document.querySelector('[style="grid-area:keywords"]') ||
-  document.querySelector('[style="grid-area: keywords;"]');
+  document.querySelector('[style="grid-area: keywords;"]') ||
+  document.querySelector('[style="grid-area:keywords;margin-bottom:10px"]');
 // ul > li > a
 
 // adobestock
-const adobeWrapper = document.querySelector(".keywords-container");
+const adobeWrapper = document.querySelector('[data-t="keywords-section"]');
 // .details-keywords-list-original > span > a
 
 // vecteezy
@@ -29,7 +30,7 @@ const copyKeywords = async () => {
     // Check if the site is Adobe Stock
     if (adobeWrapper) {
       items = adobeWrapper.querySelectorAll(
-        ".details-keywords-list-original > span > a"
+        '[aria-labelledby="similar-keywords"] div > span'
       );
     }
 
